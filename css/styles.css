@@ -35,6 +35,7 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
@@ -80,7 +81,7 @@ body {
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .primary-btn {
@@ -90,11 +91,13 @@ body {
 
 .primary-btn:hover {
     background-color: #0ea5e9;
+    transform: translateY(-2px);
 }
 
 .secondary-btn {
     background-color: white;
     color: #111;
+    transform: translateY(-2px);
 }
 
 .secondary-btn:hover {
@@ -127,6 +130,12 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover,
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
 .feature-card h3,
@@ -143,6 +152,7 @@ h2 {
     color: white;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .add-cart-btn:hover {
@@ -175,9 +185,14 @@ footer {
     .navbar {
         flex-direction: column;
         gap: 12px;
+        text-align: center;
     }
 
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
     }
 }
