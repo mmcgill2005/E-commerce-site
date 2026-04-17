@@ -1,1 +1,126 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Sports Gear Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        Free Shipping on Orders Over $50
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sports Gear Hub</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="resale.html">Resale</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products-hero">
+        <div class="products-hero-content">
+            <h1>Shop All Products</h1>
+            <p>Browse sports gear, apparel, and equipment all in one place.</p>
+        </div>
+    </section>
+
+    <section class="category-bar">
+        <a href="#">Basketball</a>
+        <a href="#">Football</a>
+        <a href="#">Soccer</a>
+        <a href="#">Baseball</a>
+        <a href="#">Fitness</a>
+    </section>
+
+    <section class="filters">
+        <select id="sportFilter">
+            <option value="all">All Sports</option>
+            <option value="basketball">Basketball</option>
+            <option value="soccer">Soccer</option>
+            <option value="football">Football</option>
+            <option value="baseball">Baseball</option>
+        </select>
+
+        <select id="genderFilter">
+            <option value="all">Gender</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="unisex">Unisex</option>
+        </select>
+
+        <select id="conditionFilter">
+            <option value="all">Condition</option>
+            <option value="new">Brand New</option>
+            <option value="used">Used</option>
+        </select>
+    </section>
+
+    <section class="products-grid-section">
+        <div class="products-grid">
+
+            <div class="store-product-card" data-sport="basketball" data-gender="unisex" data-condition="new">
+                <div class="store-image-container">
+                    <span class="item-badge">Brand New</span>
+                    <img src="images/basketball.jpg" alt="Basketball">
+                </div>
+                <div class="store-product-info">
+                    <h3>Basketball</h3>
+                    <p class="store-price">$29.99</p>
+                    <a href="cart.html" class="shop-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="store-product-card" data-sport="soccer" data-gender="men" data-condition="new">
+                <div class="store-image-container">
+                    <span class="item-badge">Brand New</span>
+                    <img src="images/cleats.jpg" alt="Soccer Cleats">
+                </div>
+                <div class="store-product-info">
+                    <h3>Soccer Cleats</h3>
+                    <p class="store-price">$49.99</p>
+                    <a href="cart.html" class="shop-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="store-product-card" data-sport="football" data-gender="men" data-condition="new">
+                <div class="store-image-container">
+                    <span class="item-badge">Brand New</span>
+                    <img src="images/fballhelmet.jpg" alt="Football Helmet">
+                </div>
+                <div class="store-product-info">
+                    <h3>Football Helmet</h3>
+                    <p class="store-price">$89.99</p>
+                    <a href="cart.html" class="shop-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="store-product-card" data-sport="baseball" data-gender="unisex" data-condition="used">
+                <div class="store-image-container">
+                    <span class="item-badge">Used - Very Good</span>
+                    <img src="images/glove.png" alt="Baseball Glove">
+                </div>
+                <div class="store-product-info">
+                    <h3>Baseball Glove</h3>
+                    <p class="store-price">$39.99</p>
+                    <a href="cart.html" class="shop-btn">Add to Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sports Gear Hub</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
