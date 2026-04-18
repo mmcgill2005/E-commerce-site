@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Sports Gear Hub</title>
+    <title>Checkout | RePlay</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         /* Single-column layout so the checkout form sits centered */
@@ -23,8 +23,9 @@
 </head>
 <body>
     <header>
+        <!-- Main site navigation -->
         <nav class="navbar">
-            <div class="logo">Sports Gear Hub</div>
+            <div class="logo">RePlay</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
@@ -32,7 +33,7 @@
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
-
+        <!-- Checkout page banner -->
         <section class="hero">
             <div class="hero-text">
                 <h1>Checkout</h1>
@@ -43,6 +44,7 @@
 
     <main>
         <section>
+            <!-- Checkout section -->
             <h2>Complete Your Order</h2>
             <div class="checkout-grid">
                 <div>
@@ -61,14 +63,16 @@
                 </div>
 
                 <aside>
+                    <!-- Order summary -->
                     <div class="order-summary">
                         <h3>Order Summary</h3>
                         <div class="summary-row"><span>Items</span><span>$89.98</span></div>
                         <div class="summary-row"><span>Shipping</span><span>$5.00</span></div>
                         <div class="summary-row" style="font-weight:bold;border-top:1px dashed #eee;padding-top:10px;"><span>Total</span><span>$94.98</span></div>
-
+                        <!-- Shipping and payment form -->
                         <h4 style="margin-top:14px;">Shipping & Payment</h4>
                         <form class="checkout-form" onsubmit="event.preventDefault();alert('Order placed — demo only.');">
+                            <!-- Customer information fields -->
                             <input type="text" name="fullname" placeholder="Full name" required>
                             <input type="email" name="email" placeholder="Email address" required>
                             <select name="country" required>
@@ -80,10 +84,11 @@
                             <input type="text" name="city" placeholder="City" required>
                             <input type="text" name="state" placeholder="State/Province" required>
                             <input type="text" name="zip" placeholder="ZIP/Postal Code" required>
-                            
+                            <!-- Payment information fields -->
                             <input type="text" name="card" placeholder="Card number (demo)" required>
                             <input type="text" name="exp_date" placeholder="Expiration date (MM/YY)" required>
                             <input type="text" name="cvv" placeholder="CVV" required>
+                            <!-- Submit order button -->
                             <button class="place-order" type="submit">Place Order</button>
                         </form>
                     </div>

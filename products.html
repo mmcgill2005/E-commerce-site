@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Sports Gear Hub</title>
+    <title>Products | RePlay</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
+<!-- top notification bar -->
     <div class="top-bar">
         Free Shipping on Orders Over $50
     </div>
-
+<!-- main site navigation -->
     <header>
         <nav class="navbar">
-            <div class="logo">Sports Gear Hub</div>
+            <div class="logo">RePlay</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html" class="active">Products</a></li>
@@ -23,7 +23,7 @@
             </ul>
         </nav>
     </header>
-
+<!-- products hero section -->
     <section class="products-hero">
         <div class="products-hero-content">
             <h1>Shop All Products</h1>
@@ -38,7 +38,7 @@
         <a href="#">Baseball</a>
         <a href="#">Fitness</a>
     </section>
-
+<!-- Product filtering controls -->
     <section class="filters">
         <select id="sportFilter">
             <option value="all">All Sports</option>
@@ -61,13 +61,15 @@
             <option value="used">Used</option>
         </select>
     </section>
-
+<!-- Product listing cards -->
     <section class="products-grid-section">
         <div class="products-grid">
 
             <div class="store-product-card" data-sport="basketball" data-gender="unisex" data-condition="new">
                 <div class="store-image-container">
+                    <!-- Product condition badge -->
                     <span class="item-badge">Brand New</span>
+                    <!-- Product image -->
                     <img src="images/basketball.jpg" alt="Basketball">
                 </div>
                 <div class="store-product-info">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - Sports Gear Hub</title>
+    <title>Cart | RePlay</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .checkout-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; align-items:start; }
@@ -18,8 +18,9 @@
 </head>
 <body>
     <header>
+        <!-- Main site navigation -->
         <nav class="navbar">
-            <div class="logo">Sports Gear Hub</div>
+            <div class="logo">RePlay</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
@@ -27,7 +28,7 @@
                 <li><a href="cart.html" class="active">Cart</a></li>
             </ul>
         </nav>
-
+        <!-- Cart page banner -->
         <section class="hero">
             <div class="hero-text">
                 <h1>Your Cart</h1>
@@ -37,12 +38,15 @@
     </header>
 
     <main>
+        <!-- Shopping cart section -->
         <section>
             <h2>Your Cart</h2>
             <div class="checkout-grid" style="max-width:1100px;margin:auto;padding:10px 20px;">
                 <div>
+                    <!-- Individual cart item -->
                     <div class="product-card">
                         <div style="display:flex;gap:12px;align-items:center;">
+                            <!-- Cart item image -->
                             <img src="images/basketball.jpg" alt="Basketball" style="width:88px;height:88px;border-radius:8px;object-fit:cover;">
                             <div>
                                 <h3>Basketball</h3>
@@ -67,12 +71,14 @@
 
                 <aside>
                     <div class="order-summary">
+                        <!-- Order summary panel -->
                         <h3>Order Summary</h3>
                         <div class="summary-row"><span>Items</span><span>$89.98</span></div>
                         <div class="summary-row"><span>Shipping</span><span>$5.00</span></div>
                         <div class="summary-row" style="font-weight:bold;border-top:1px dashed #eee;padding-top:10px;"><span>Total</span><span>$94.98</span></div>
 
                         <div style="margin-top:14px;">
+                            <!-- Proceed to checkout button -->
                             <a href="checkout.html" class="btn primary-btn" style="display:block;text-align:center;padding:12px;border-radius:8px;">Proceed to Checkout</a>
                         </div>
                     </div>
