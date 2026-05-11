@@ -1,45 +1,81 @@
-// Get filter dropdown controls
+const productGrid = document.querySelector(".products-grid");
 const sportFilter = document.getElementById("sportFilter");
 const genderFilter = document.getElementById("genderFilter");
 const conditionFilter = document.getElementById("conditionFilter");
-// Select all product cards
-const productCards = document.querySelectorAll(".store-product-card");
-// Filters products based on selected criteria
+
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function addToCart(productId) {
+    const cart = getCart();
+    const existingItem = cart.find(item => item.id === productId);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ id: productId, quantity: 1 });
+    }
+
+    saveCart(cart);
+    alert("Item added to cart.");
+}
+
+function renderProducts(productList) {
+    productGrid.innerHTML = "";
+
+    productList.forEach(product => {
+        productGrid.innerHTML += `
+            <div class="store-product-card"
+                 data-sport="${product.sport}"
+                 data-gender="${product.gender}"
+                 data-condition="${product.condition}">
+                 
+                <div class="store-image-container">
+                    <span class="item-badge">${product.tag}</span>
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+
+                <div class="store-product-info">
+                    <h3>${product.name}</h3>
+                    <p class="store-price">$${product.price.toFixed(2)}</p>
+                    <button class="shop-btn add-to-cart-btn" data-id="${product.id}">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        `;
+    });
+
+    document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            addToCart(button.dataset.id);
+        });
+    });
+}
+
 function filterProducts() {
-    // Store dropdown selections
     const selectedSport = sportFilter.value;
     const selectedGender = genderFilter.value;
     const selectedCondition = conditionFilter.value;
-      // Loop through every product card
-    productCards.forEach(card => {
-         // Read data attributes from each product
-        const cardSport = card.dataset.sport;
-        const cardGender = card.dataset.gender;
-        const cardCondition = card.dataset.condition;
-        // Compare selections to product data
-        const matchSport =
-            selectedSport === "all" ||
-            cardSport === selectedSport;
 
-        const matchGender =
-            selectedGender === "all" ||
-            cardGender === selectedGender;
+    const filteredProducts = products.filter(product => {
+        const matchSport = selectedSport === "all" || product.sport === selectedSport;
+        const matchGender = selectedGender === "all" || product.gender === selectedGender;
+        const matchCondition = selectedCondition === "all" || product.condition === selectedCondition;
 
-        const matchCondition =
-            selectedCondition === "all" ||
-            cardCondition === selectedCondition;
-        // Show matching products,
-        // hide non-matching products
-        if (matchSport && matchGender && matchCondition) {
-            card.style.display = "block";
-        }
-        else {
-            card.style.display = "none";
-        }
-
+        return matchSport && matchGender && matchCondition;
     });
+
+    renderProducts(filteredProducts);
 }
-// Run filtering when dropdown changes
+
 sportFilter.addEventListener("change", filterProducts);
 genderFilter.addEventListener("change", filterProducts);
 conditionFilter.addEventListener("change", filterProducts);
+
+renderProducts(products);

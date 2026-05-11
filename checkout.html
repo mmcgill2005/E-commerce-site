@@ -47,31 +47,34 @@
             <!-- Checkout section -->
             <h2>Complete Your Order</h2>
             <div class="checkout-grid">
-                <div>
-                    <div class="mini-items">
-                        <div class="mini-card product-card">
-                            <img src="images/basketball.jpg" alt="Basketball">
-                            <h4>Basketball</h4>
-                            <div class="price">$29.99</div>
-                        </div>
-                        <div class="mini-card product-card">
-                            <img src="images/cleats.jpg" alt="Cleats">
-                            <h4>Soccer Cleats</h4>
-                            <div class="price">$59.99</div>
-                        </div>
-                    </div>
-                </div>
+                <div class="mini-items" id="checkoutItems"></div>
 
                 <aside>
                     <!-- Order summary -->
                     <div class="order-summary">
                         <h3>Order Summary</h3>
-                        <div class="summary-row"><span>Items</span><span>$89.98</span></div>
-                        <div class="summary-row"><span>Shipping</span><span>$5.00</span></div>
-                        <div class="summary-row" style="font-weight:bold;border-top:1px dashed #eee;padding-top:10px;"><span>Total</span><span>$94.98</span></div>
+                        <div class="summary-row">
+                            <span>Items</span>
+                            <span id="checkoutSubtotal">$0.00</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span id="checkoutTax">$5.00</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Delivery</span>
+                            <span id="checkoutDelivery">$0.00</span>
+                        </div>
+
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span id="checkoutTotal">$0.00</span>
+                        </div>
                         <!-- Shipping and payment form -->
                         <h4 style="margin-top:14px;">Shipping & Payment</h4>
-                        <form class="checkout-form" onsubmit="event.preventDefault();alert('Order placed — demo only.');">
+                        <form class="checkout-form" id="checkoutForm">
                             <!-- Customer information fields -->
                             <input type="text" name="fullname" placeholder="Full name" required>
                             <input type="email" name="email" placeholder="Email address" required>
@@ -100,5 +103,7 @@
     <footer>
         <p>&copy; 2026 Sports Gear Hub | E-Commerce Prototype</p>
     </footer>
+<script src="js/data.js"></script>
+<script src="js/checkout.js"></script>
 </body>
 </html>
