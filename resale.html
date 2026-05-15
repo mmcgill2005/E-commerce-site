@@ -31,6 +31,64 @@
         </div>
     </section>
 
+    <section class="resale-add-item-section">
+        <h2>Sell an Item</h2>
+        <p>Add your item to the shop and make it appear on the main products page.</p>
+
+        <form id="addResaleItemForm" class="add-item-form">
+            <div class="form-row">
+                <label for="itemName">Product Name</label>
+                <input type="text" id="itemName" placeholder="Enter the product name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="itemPrice">Price</label>
+                <input type="number" id="itemPrice" step="0.01" min="0" placeholder="Enter price" required>
+            </div>
+
+            <div class="form-row">
+                <label for="itemImageFile">Upload Image</label>
+                <input type="file" id="itemImageFile" accept="image/*">
+            </div>
+
+            <div class="form-row">
+                <label for="itemImage">Or Image URL</label>
+                <input type="url" id="itemImage" placeholder="Enter an image URL or relative site path">
+            </div>
+
+            <div class="form-row">
+                <label for="itemSport">Filter Tag</label>
+                <select id="itemSport" required>
+                    <option value="basketball">Basketball</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="football">Football</option>
+                    <option value="baseball">Baseball</option>
+                    <option value="fitness">Fitness</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="itemGender">Gender</label>
+                <select id="itemGender" required>
+                    <option value="unisex">Unisex</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="itemCondition">Condition</label>
+                <select id="itemCondition" required>
+                    <option value="new">Brand New</option>
+                    <option value="used">Used</option>
+                </select>
+            </div>
+
+            <button type="submit" class="shop-btn">Add Item to Shop</button>
+            <p id="addItemMessage" class="form-message"></p>
+        </form>
+    </section>
+
     <main>
         <!-- Featured resale items section -->
         <section class="resale-featured">
