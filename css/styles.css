@@ -584,3 +584,87 @@ footer {
     text-align: center;
     margin-top: 14px;
 }
+/* =========================
+   SELL ITEM FORM STYLES
+========================= */
+
+.resale-add-item-section {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.resale-add-item-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.3rem;
+    color: #111827;
+}
+
+.resale-add-item-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 1rem;
+}
+
+.add-item-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.form-row input,
+.form-row select {
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9fafb;
+    transition: border-color 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+}
+
+.add-item-form .shop-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.form-message {
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .resale-add-item-section {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+
+    .resale-add-item-section h2 {
+        font-size: 2rem;
+    }
+}
