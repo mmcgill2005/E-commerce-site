@@ -20,7 +20,7 @@ Live Website
 
 Open the deployed GitHub Pages link:
 
-PASTE YOUR GITHUB PAGES LINK HERE
+https://github.com/mmcgill2005/E-commerce-site.git 
 Run Locally
 Download or clone the repository
 Open the project folder
